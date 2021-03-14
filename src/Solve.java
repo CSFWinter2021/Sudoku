@@ -100,8 +100,8 @@ public class Solve {
 		
 		
 		// traverse sub-board
-		for (int i = subBoardY*3; i < subBoardY+3; i++) {
-			for (int j = subBoardX*3; j < subBoardX+3; j++) {
+		for (int i = subBoardY*3; i < subBoardY*3+3; i++) {
+			for (int j = subBoardX*3; j < subBoardX*3+3; j++) {
 				if (board.point[i][j].getValue() == number && i != position[0] && j != position[1]) {
 					return false;
 				}
