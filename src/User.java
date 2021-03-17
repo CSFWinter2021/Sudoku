@@ -1,7 +1,9 @@
 package com.sudoku.models;
 import java.util.Scanner;
 
-public class Help {
+public class User {
+
+    protected int userScore = 0;
 
     //print out the possible values for the selected point.
     public static void movesRemaining(MainBoard board, Subboard subboard, Point point) {
@@ -11,11 +13,13 @@ public class Help {
         int k;
         int x = point.rowLocation;
         int y = point.columnLocation;
+        int[] temp = new int[27];
         
         //represents the numbers 1 through 9, to indicate whether they are valid at the current location.
         boolean[] exists = {false, false, false, false, false, false, false, false, false};
         
-        //todo: combine the board row, column, and subboard into a single array to analyze for missing values.
+        //combine the board row, column, and subboard into a single array to analyze for missing values.
+        
         for (i = 0; i < 9; i++) {
             temp[i] = board[i][x];
         }
@@ -51,5 +55,19 @@ public class Help {
                 System.out.print((i + 1) + " ");
             }
         }
+    }
+
+    //add one to user score for game won
+    private void setScore() {
+    
+        userScore++;
+
+    }
+
+    //get user score
+    public int getScore() {
+
+        return userScore;
+    
     }
 }
