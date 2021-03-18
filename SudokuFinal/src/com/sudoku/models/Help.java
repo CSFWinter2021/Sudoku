@@ -8,7 +8,7 @@ public class Help {
     public static String movesRemaining(MainBoard board, Subboard subboard, Point point) {
     	
     	String S = new String("Suggested Moves: ");
-    	int[] temp = new int[81];
+    	int[] temp = new int[27];
         int i;
         int j;
         int k;
@@ -18,7 +18,7 @@ public class Help {
         //represents the numbers 1 through 9, to indicate whether they are valid at the current location.
         boolean[] exists = {false, false, false, false, false, false, false, false, false};
         
-        //todo: combine the board row, column, and subboard into a single array to analyze for missing values.
+        //combine the board row, column, and subboard into a single array to analyze for missing values.
         for (i = 0; i < 9; i++) {
             temp[i] = board.point[i][x].getValue();
         }
