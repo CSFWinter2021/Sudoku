@@ -45,7 +45,7 @@ public class GUI extends JFrame{
 		private JPanel sudokuPanelMenu = new JPanel(); //holds menu panels for interacting with board	
 		
 		private JPanel sudokuHelpPanel1 = new JPanel(); //Help panels displayed when pressing the help button
-		private JPanel sudokuHelpPanel2 = new JPanel(); //first help panel used for entering X/Y of where you want help, second panel displays possibe values for that location
+		private JPanel sudokuHelpPanel2 = new JPanel(); //first help panel used for entering X/Y of where you want help, second panel displays possible values for that location
 		
 		private JPanel sudokuFinishPanel = new JPanel(); //Finish panel displayed when pressing the solve button
 		
@@ -54,13 +54,13 @@ public class GUI extends JFrame{
 	
 //JButtons defined here
 	//These are buttons displayed on main menu panel
-		private JButton startGameB = new JButton("starte a new game"); //starts a new game with a random board from a selection of 30 boards
-		private JButton viewScoresB = new JButton("view user scores"); //displays panel showing how many games the user has won
-		private JButton exitGameB = new JButton("exit the game"); //closes the game
+		private JButton startGameB = new JButton("Start a new game"); //starts a new game with a random board from a selection of 30 boards
+		private JButton viewScoresB = new JButton("View user scores"); //displays panel showing how many games the user has won
+		private JButton exitGameB = new JButton("Exit the game"); //closes the game
 	
 	//Menu options on sudoku panel for interacting with the board
 		private JButton helpB = new JButton("Help"); //Shows possible entries for target location
-		private JButton solveB = new JButton("solve"); //Tests to see if entered puzzle solution is valid
+		private JButton solveB = new JButton("Solve"); //Tests to see if entered puzzle solution is valid
 		private JButton solveForMeB = new JButton("Solve For Me"); //Auto-solves board and shows solution
 		private JButton giveUpB = new JButton("Give up"); //gives up and changes panel back to main menu panel
 		
@@ -85,7 +85,7 @@ public class GUI extends JFrame{
 		private JTextField helpFieldX = new JTextField(); //used to enter X value on help panel
 		private JTextField helpFieldY = new JTextField(); //used to enter Y value on help panel
 				
-//defines seperate text fields for all 81 squares in sudoku, the numbers of each textfield refers to their X/Y coordinates in the grid
+//defines separate text fields for all 81 squares in sudoku, the numbers of each textfield refers to their X/Y coordinates in the grid
 	private JTextField s11 = new JTextField();
 	private JTextField s12 = new JTextField();
 	private JTextField s13 = new JTextField();
@@ -666,7 +666,7 @@ public void setBoard() {
 	for(int i = 0; i < 9; i++) {
 		for(int j = 0; j < 9; j++) {						
 			
-			//0 on the sudoku board is an emtpy space, anything not zero makes the textfield non-editable and displays the number			
+			//0 on the sudoku board is an empty space, anything not zero makes the textfield non-editable and displays the number			
 			if (mainBoard.point[i][j].getValue() == 0) {
 				sudokuArray[i][j].setText("");
 				sudokuArray[i][j].setEditable(true);
